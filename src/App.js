@@ -13,6 +13,7 @@ import {
 const colorGitHub = "#010409";
 const colorFontGitHub = '#c9D1D9';
 const colorDarkFontGitHub = '#4F565E';
+
 const imageProfileGitHub = 'https://avatars.githubusercontent.com/u/106713684?v=4';
 
 const urlToMyGitHub = 'https://github.com/MMagnun'; 
@@ -28,22 +29,22 @@ const App = () => {
         }
     };
     
-
     return (
         <SafeAreaView style={style.container}>
             <StatusBar backgroundColor={colorGitHub} barStyle='light-content'/>         
             <View style={style.content}>
-                <Image accessibilityLabel="Marcelo no meio do arrozal" style={style.avatar} source={{uri: imageProfileGitHub }}/>
-                <Text accessibilityLabel="Nome Marcelo Magnun" style={[style.defaultText, style.name/*{color: 'green'} */]}>Marcelo Magnun</Text>
-                <Text accessibilityLabel="Nome Marcelo Magnun" style={[style.defaultText, style.nickname]}>MMagnun</Text>
-                <Text accessibilityLabel="Nome Marcelo Magnun" style={[style.defaultText, style.description]}></Text>
-            </View>
+                    <Image accessibilityLabel="Marcelo no meio do arrozal" style={style.avatar} source={{uri: imageProfileGitHub }}/>
 
-            <Pressable onPress={handlePressGoToGitHub}>
-            <View style={style.button}>
-                <Text style={[style.defaultText, style.textButton]}>Open on GitHub</Text>
+                    <Text accessibilityLabel="Nome Marcelo Magnun" style={[style.defaultText, style.name/*{color: 'green'} */]}>Marcelo Magnun</Text>
+                    <Text accessibilityLabel="Nome Marcelo Magnun" style={[style.defaultText, style.nickname]}>MMagnun</Text>
+                    <Text accessibilityLabel="Nome Marcelo Magnun" style={[style.defaultText, style.description]}></Text>
+                
+                <Pressable onPress={handlePressGoToGitHub}>
+                    <View style={style.button}>
+                        <Text style={[style.defaultText, style.textButton]}>Open on GitHub</Text>
+                    </View>
+                </Pressable>
             </View>
-            </Pressable>
         </SafeAreaView>
     );
 };
@@ -73,16 +74,16 @@ const style = StyleSheet.create({
         borderWidth: 2, 
     }, 
     defaultText: {
-        color: 'imageProfileGitHub',
+        color: colorFontGitHub,
     }, 
     name: {
         marginTop: 20, 
-        fontSize: 25, 
+        fontSize: 24, 
         fontWeight: 'bold',
       }, 
     nickname: {
         fontSize: 18,
-        color: 'colorDarkFontGitHub'
+        color: colorDarkFontGitHub
     },
     description: {
         fontSize: 14,
